@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-  resources :events
-=======
-  devise_for :users, path: 'auth', controllers: {
-     sessions: 'users/sessions'
-  }
+  mount_devise_token_auth_for 'User', at: 'auth'
   root 'home#index'
->>>>>>> a218c41b9cd5d4331c721fe314116cf481620c03
+
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
